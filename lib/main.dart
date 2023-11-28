@@ -1,6 +1,7 @@
 import "package:custom_widgets/custom_icon.dart";
 import "package:custom_widgets/custom_text.dart";
 import "package:custom_widgets/image_chooser.dart";
+import "custom_listview.dart";
 import "package:flutter/material.dart";
 
 class MyApp extends StatelessWidget{
@@ -11,14 +12,24 @@ class MyApp extends StatelessWidget{
       theme: ThemeData(primarySwatch: Colors.pink),
       home: Scaffold(
         appBar: AppBar(title: const Text("My Image"), centerTitle: true,),
-        body:const Column(
-          mainAxisAlignment: MainAxisAlignment.end, // decides how to place the children widget along the vertical axis
+      body:const CustomList(),
+        /*body:const Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // decides how to place the children widget along the vertical axis
           crossAxisAlignment: CrossAxisAlignment.center, // decides how to place the children widgets along the horizontal axis
           children: [
            // ImageChooser(choice: 1,),
           //ImageChooser(choice: 2,),
           
-            CustomIcon(objectSize: 50,),
+      Row(
+        // main axis in row is the horizontal axis
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+        CustomIcon(objectColor: Colors.green,),
+        CustomIcon(objectColor: Colors.yellow,),
+        CustomIcon(objectColor: Colors.red,),
+      ],)
+
+            ,
             CustomIcon(objectSize: 50, objectColor: Colors.red,),
             CustomIcon(objectSize: 50, objectColor: Colors.blue,),
             
@@ -26,7 +37,7 @@ class MyApp extends StatelessWidget{
           ],
         )
         //const ImageChooser(choice: 2,)
-      
+      */
       )
     );
   }
